@@ -1,0 +1,39 @@
+main div {
+	border: 1px solid black;
+	padding: 20px;
+	background: red;
+}
+main div div {
+	background: orange;
+}
+main div div div {
+	background: yellow;
+}
+main div div div div {
+	background: green;
+}
+main div div div div div {
+	background: blue;
+}
+li {
+	list-style: none;
+}
+li:before {
+	content: "- ";
+}
+li:nth-child(even) {
+	font-size: 20px;
+}
+li:nth-child(3n+1) {
+	background: yellow;
+}
+li:first-of-type{
+	color: green;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	color: red;
+}
