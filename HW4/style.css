@@ -1,0 +1,273 @@
+* {
+	box-sizing: border-box;
+}
+#wrapper {
+	width: 100%;
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 15px;
+	overflow: hidden;
+}
+.header,
+.footer {
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+.header {
+	border-bottom: 2px solid #c0c0c0;
+}
+.logo {
+	width: 190px;
+}
+.logo img {
+	width: 50%;
+	max-width: 100%;
+}
+.menu-icon {
+	display: block;
+	width: 45px;
+	height: 35px;
+	position: relative;
+	cursor: pointer;
+}
+.menu-icon span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 9px;
+	background: #333;
+	border-right: 9px;
+	opacity: 1;
+	left: 0;
+	transform: rotate(0deg);
+	transition: .25s ease-in-out;
+}
+.menu-icon span:nth-child(1) {
+	top: 0px;
+}
+.menu-icon span:nth-child(2),
+.menu-icon span:nth-child(3) {
+	top: 13px;
+}
+.menu-icon span:nth-child(4) {
+	top: 26px;
+}
+.menu.menu-state-open .menu-icon span:nth-child(1),
+.menu.menu-state-open .menu-icon span:nth-child(4) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+.menu.menu-state-open .menu-icon span:nth-child(2) {
+	transform: rotate(45deg);
+}
+.menu.menu-state-open .menu-icon span:nth-child(3) {
+	transform: rotate(-45deg);
+}
+.menu.menu-state-open ul {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 80px;
+}
+.menu ul {
+	display: none;
+}
+.menu li {
+	list-style: none;
+	padding: 5px 10px;
+	background: #d8bfd8;
+	border-bottom: 1px solid #000;
+}
+.menu a,
+.main a,
+.footer a {
+	text-decoration: none;
+	color: inherit;
+}
+.menu a:hover,
+.footer a:hover {
+	color: #4682B4;
+}
+.main h2 {
+	color: #A5285C;
+	font-size: 1.9em;
+}
+.main {
+	padding: 0;
+}
+.main img {
+	width: 190px;
+}
+.article {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	padding-bottom: 20px;
+}
+.article:last-child {
+	padding-bottom: 0;
+}
+.article div {
+	max-height: 190px;
+}
+.article img {
+	width: 150px;
+}
+.content {
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	margin: 0 -25px 0 -25px;
+}
+.product {
+	width: 100%;
+	padding: 0 25px 25px;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.product a {
+	display: block;
+	height: 100%;
+	padding: 25px;
+	border: 1px solid black;
+	transition: all 1s ease-out 0.2s;
+}
+.product a:hover {
+	background: #4682B4;
+	color: #fff;
+	border-radius: 20px;
+}
+.product img {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto 25px;
+}
+.footer {
+	border-top: 2px solid #c0c0c0;
+	padding-top: 10px;
+}
+.footer img {		
+	width: 50px;
+}
+.footer address {
+	font-size: 0.7em;
+}
+.footer a {
+	text-decoration: none;
+	color: inherit;
+}
+@media screen and (min-width: 500px) {
+	.main p {
+		margin-top: 0;
+	}
+	.main p:last-child {
+		margin-bottom: 0;
+	}
+	.article {
+		flex-direction: row;
+	}
+	.article div {
+		margin-right: 25px;
+	}
+	.article:nth-child(odd) div {
+		order: 2;	
+		margin-right: 0;
+		margin-left: 25px;
+	}
+	.product {
+		width: 50%;
+		padding: 0 15px 30px 25px;
+	}
+	.product:nth-child(2n) {
+		padding: 0 25px 30px 15px;
+	}
+	.footer img {		
+		width: 75px;
+	}
+	.footer address {
+		font-size: 0.9em;
+	}
+}
+@media screen and (min-width: 600px) {
+	.logo img {
+		width: 70%;
+	}
+	.menu-icon {
+		display: none;
+	}
+	.menu ul {
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		padding-left: 0;
+	}
+	.menu li {
+		padding-left: 0px;
+		background: #fff;
+		border-bottom: none;
+	}
+	.menu li:last-child {
+		padding-right: 0;
+	}
+	.article img {
+		width: 190px;
+	}
+	.footer address {
+		font-size: 1em;
+	}
+}
+@media  screen and (min-width: 768px) {
+	.header {
+		padding: 0 25px;
+	}
+	.logo img {
+		width: 100%;
+	}
+	.menu li {
+		padding-right: 25px;
+	}
+	.main .product {
+		width: 33.33%;
+		padding: 0 15px 30px 15px;
+	}
+	.product:nth-child(3n-2) {
+		padding-left: 25px;
+	}
+	.product:nth-child(3n) {
+		padding-right: 25px;
+	}
+	.footer {
+		padding-top: 25px;		
+	}
+	.footer img {		
+		width: 95px;
+	}
+}
+@media  screen and (min-width: 1200px) {
+	.main {
+		padding: 30px 0 50px 0;
+	}
+	.article {
+		padding-bottom: 60px;
+	}
+	.main .content .product {
+		padding: 25px;
+	}
+	.product img {		
+		float: left;
+		margin-right: 25px;
+	}	
+}
